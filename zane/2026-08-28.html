@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zane — Today · Friday 2026-08-28</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
+
+    :root {
+      --primary: #5B7C5A;
+      --secondary: #E8DEC2;
+      --accent: #D89355;
+      --deep: #2A3825;
+      --paper: #FBF1DC;
+      --rule: #D8B98A;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html, body { background: #FBF1DC; }
+
+    body {
+      font-family: 'Quicksand', system-ui, sans-serif;
+      color: var(--deep);
+      line-height: 1.55;
+      min-height: 100vh;
+      padding: 24px;
+      background-image:
+        radial-gradient(circle at 12% 18%, rgba(216, 181, 138, 0.15) 0, transparent 38%),
+        radial-gradient(circle at 88% 82%, rgba(216, 181, 138, 0.12) 0, transparent 42%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.05'/></svg>");
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 2px solid var(--rule);
+      border-radius: 6px;
+      padding: 36px 44px 28px;
+      box-shadow:
+        0 1px 0 var(--rule),
+        0 12px 28px rgba(0,0,0,0.08),
+        inset 0 0 60px rgba(216, 181, 138, 0.08);
+      position: relative;
+    }
+
+    /* decorative inner border — Usborne-style frame */
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px dashed var(--rule);
+      border-radius: 4px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* corner flourishes */
+    .flourish {
+      position: absolute;
+      width: 56px; height: 56px;
+      opacity: 0.55;
+    }
+    .flourish.tl { top: 8px; left: 8px; }
+    .flourish.tr { top: 8px; right: 8px; transform: scaleX(-1); }
+    .flourish.bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+    .flourish.br { bottom: 8px; right: 8px; transform: scale(-1, -1); }
+
+    /* HEADER */
+    .head {
+      display: grid;
+      grid-template-columns: 130px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 3px double var(--rule);
+      margin-bottom: 22px;
+    }
+
+    .mascot {
+      width: 110px; height: 110px;
+      filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.08));
+    }
+
+    .head-title {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 64px;
+      line-height: 0.95;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      text-shadow: 2px 2px 0 var(--secondary);
+    }
+    .head-title small {
+      display: block;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 26px;
+      color: var(--deep);
+      margin-top: 4px;
+      font-weight: 400;
+      text-shadow: none;
+    }
+
+    /* HERO BANNER — watercolor Usborne-style illustration above the title */
+    .hero-banner {
+      position: relative;
+      margin: -16px -16px 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--rule);
+      box-shadow:
+        0 4px 14px rgba(0,0,0,0.08),
+        inset 0 0 0 1px var(--paper);
+      background: var(--paper);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .hero-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(251, 241, 220, 0.94);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+      color: var(--deep);
+      border: 1.5px solid var(--rule);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .hero-tag {
+      letter-spacing: 0.5px;
+    }
+    .hero-fallback {
+      display: none;
+      padding: 28px 16px;
+      text-align: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: var(--deep);
+      opacity: 0.6;
+    }
+
+    .head-meta {
+      text-align: right;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 18px;
+      color: var(--deep);
+    }
+    .head-meta .day {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 28px;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .head-meta .date { opacity: 0.78; }
+    .head-meta .grade { opacity: 0.7; font-size: 16px; }
+
+    /* SUBJECT STRIP */
+    .subject {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 22px;
+      color: var(--deep);
+      background: var(--secondary);
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1.5px solid var(--rule);
+      width: fit-content;
+      margin: 0 0 18px;
+    }
+
+    /* DID YOU KNOW box — classic Usborne yellow */
+    .dyk {
+      background: #FFF4C2;
+      border: 2px solid #C9A227;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      position: relative;
+      box-shadow: 4px 4px 0 rgba(201, 162, 39, 0.18);
+    }
+    .dyk::before {
+      content: "💡";
+      position: absolute;
+      left: -14px; top: -14px;
+      font-size: 28px;
+      background: var(--paper);
+      border: 2px solid #C9A227;
+      border-radius: 50%;
+      width: 38px; height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-8deg);
+    }
+    .dyk-label {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 22px;
+      color: #8C6E0F;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .dyk p { font-size: 16px; color: #4A3A0A; }
+
+    /* SECTION HEADERS */
+    .section { margin: 22px 0; }
+    .section h2 {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 34px;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section h2::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, var(--rule), transparent);
+      margin-left: 6px;
+    }
+    .section h3 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 22px;
+      color: var(--primary);
+      margin: 12px 0 6px;
+    }
+
+    .section p { font-size: 16px; margin: 6px 0; color: #2B2419; }
+    .section p strong { color: var(--primary); }
+    .section em { color: var(--accent); }
+
+    .section ul, .section ol { margin: 8px 0 8px 22px; }
+    .section li { font-size: 16px; margin: 4px 0; color: #2B2419; }
+
+    .section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      background: rgba(255,255,255,0.5);
+      border: 1.5px solid var(--rule);
+    }
+    .section th {
+      background: var(--primary);
+      color: var(--paper);
+      font-family: 'Patrick Hand', cursive;
+      font-weight: 400;
+      padding: 8px 10px;
+      text-align: left;
+      font-size: 16px;
+    }
+    .section td {
+      padding: 8px 10px;
+      border-bottom: 1px dashed var(--rule);
+      font-size: 14px;
+    }
+    .section tr:last-child td { border-bottom: none; }
+
+    .section blockquote {
+      border-left: 4px solid var(--accent);
+      background: rgba(232, 159, 113, 0.12);
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #3D2817;
+    }
+
+    /* TRY THIS box — activity section */
+    .try {
+      background: rgba(91, 124, 90, 0.10);
+      border: 2px dashed var(--primary);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+    .try-label {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    /* HINT strip */
+    .hint {
+      background: #FFE9C7;
+      border-left: 5px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #6B4226;
+      margin: 10px 0;
+    }
+    .hint strong { color: var(--accent); }
+
+    /* ANSWER / CHECK */
+    .check {
+      background: #E8F0E5;
+      border: 2px solid #7A9D6E;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .check-label {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 24px;
+      color: #4A6B47;
+      margin-bottom: 4px;
+    }
+
+    /* BADGE — Usborne-style ribbon seal */
+    .badge-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 14px;
+      align-items: center;
+      margin: 28px 0 12px;
+      padding: 18px;
+      background: linear-gradient(135deg, var(--secondary), rgba(255,255,255,0.4));
+      border-radius: 14px;
+      border: 2px solid var(--rule);
+      position: relative;
+    }
+    .badge-stars {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 30px;
+      color: var(--accent);
+      text-align: right;
+    }
+    .badge-medal {
+      width: 110px; height: 110px;
+      background:
+        radial-gradient(circle at 30% 30%, #FFE7A0 0%, #D89355 70%, #A85F2E 100%);
+      border-radius: 50%;
+      border: 4px double #FBF1DC;
+      box-shadow:
+        0 6px 0 #A85F2E,
+        0 8px 16px rgba(0,0,0,0.15),
+        inset 0 -4px 8px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Caveat Brush', cursive;
+      font-size: 48px;
+      color: #FBF1DC;
+      text-shadow: 1px 1px 0 #6B4226;
+    }
+    .badge-info {
+      font-family: 'Patrick Hand', cursive;
+    }
+    .badge-info .lbl {
+      font-size: 16px;
+      color: var(--deep);
+      opacity: 0.78;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .badge-info .nm {
+      font-family: 'Caveat Brush', cursive;
+      font-size: 30px;
+      color: var(--primary);
+      line-height: 1.05;
+    }
+    .badge-info .sub {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* FOOTER */
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      margin-top: 8px;
+      border-top: 1.5px dashed var(--rule);
+      font-family: 'Patrick Hand', cursive;
+      color: var(--deep);
+      opacity: 0.8;
+    }
+    .foot-left { font-size: 16px; }
+    .foot-right { font-size: 14px; opacity: 0.7; }
+
+    @media print {
+      body { padding: 0; background: white; }
+      .page { box-shadow: none; border: 1px solid #ccc; }
+    }
+    @media (max-width: 720px) {
+      body { padding: 12px; }
+      .page { padding: 22px 18px; }
+      .head { grid-template-columns: 80px 1fr; gap: 10px; }
+      .head-meta { grid-column: 1 / -1; text-align: left; padding-left: 90px; }
+      .mascot { width: 72px; height: 72px; }
+      .head-title { font-size: 42px; }
+      .badge-row { grid-template-columns: 1fr; text-align: center; }
+      .badge-stars { text-align: center; }
+      .hero-img { max-height: 200px; }
+      .hero-caption { font-size: 14px; padding: 4px 10px; }
+      .hero-banner { margin: -8px -8px 16px; }
+    }
+    </style>
+</head>
+<body>
+<div class="page">
+  <div class="flourish tl">
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#5B7C5A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#5B7C5A"/>
+  <circle cx="22" cy="22" r="2" fill="#5B7C5A"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+</svg></div>
+  <div class="flourish tr">
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#5B7C5A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#5B7C5A"/>
+  <circle cx="22" cy="22" r="2" fill="#5B7C5A"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+</svg></div>
+  <div class="flourish bl">
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#5B7C5A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#5B7C5A"/>
+  <circle cx="22" cy="22" r="2" fill="#5B7C5A"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+</svg></div>
+  <div class="flourish br">
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#5B7C5A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#5B7C5A"/>
+  <circle cx="22" cy="22" r="2" fill="#5B7C5A"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
+</svg></div>
+
+  <figure class="hero-banner">
+    <img src="../assets/heroes/zane.png" alt="Zane's adventure" class="hero-img" loading="lazy" decoding="async" onerror="this.parentNode.querySelector('.hero-fallback').style.display='block';this.style.display='none';">
+    <div class="hero-fallback">Today's Adventure</div>
+    <figcaption class="hero-caption">
+      <span class="hero-tag">Today's Adventure</span>
+      <span>🦊</span>
+    </figcaption>
+  </figure>
+
+  <header class="head">
+    <div class="mascot">
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <polygon points="20,40 35,12 50,42" fill="#D87437"/>
+  <polygon points="100,40 85,12 70,42" fill="#D87437"/>
+  <path d="M60 22 Q30 22 24 60 Q24 95 60 100 Q96 95 96 60 Q90 22 60 22 Z" fill="#D87437"/>
+  <path d="M60 50 Q40 50 36 78 Q40 96 60 96 Q80 96 84 78 Q80 50 60 50 Z" fill="#FBF1DC"/>
+  <ellipse cx="45" cy="58" rx="5" ry="7" fill="#2A3825"/>
+  <ellipse cx="75" cy="58" rx="5" ry="7" fill="#2A3825"/>
+  <circle cx="46" cy="56" r="2" fill="#FBF1DC"/>
+  <circle cx="76" cy="56" r="2" fill="#FBF1DC"/>
+  <ellipse cx="60" cy="74" rx="6" ry="4" fill="#2A3825"/>
+  <path d="M52 80 Q60 88 68 80" stroke="#2A3825" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="46" y="106" width="10" height="6" rx="3" fill="#D87437"/>
+  <rect x="64" y="106" width="10" height="6" rx="3" fill="#D87437"/>
+</svg></div>
+    <div>
+      <div class="head-title">🌍 Looking After Our Planet — Everyone Can Make a Difference! 🌍♻️🌱<small>Today with Zane</small></div>
+    </div>
+    <div class="head-meta">
+      <span class="day">🌟 Friday</span>
+      <span class="date">Friday 28 August 2026</span>
+      <span class="grade">Grade 3 · Age 8</span>
+    </div>
+  </header>
+
+  <div class="subject">🌍 Today · Week 7 · Friday's lesson</div>
+
+  <main>
+    <section class="section teach"><p><strong>This is our only planet — and we're the generation that can protect it! Let's make a difference! 🌟</strong></p>
+<h3>🌍 Why Does Our Planet Need Protecting?</h3>
+<p>Our Earth is amazing, but it's in danger from pollution and overuse of resources:</p>
+<table><thead><tr><th>Problem</th><th>What it is</th><th>Why it matters</th></tr></thead><tbody><tr><td>🏭 Pollution</td><td>Dirty smoke, chemicals, plastic in the ocean</td><td>Makes air, water, and soil unhealthy</td></tr><tr><td>🐾 Loss of wildlife</td><td>Animals and plants dying out</td><td>Every species plays a role in nature</td></tr><tr><td>🌡️ Climate change</td><td>Earth is slowly getting warmer</td><td>Causes storms, floods, droughts</td></tr><tr><td>🗑️ Too much waste</td><td>People throw away too much plastic and food</td><td>Landfills fill up, oceans get polluted</td></tr><tr><td>🌲 Cutting down trees</td><td>Forests are cleared for farms/cities</td><td>Animals lose homes; less clean air</td></tr></tbody></table>
+<h3>♻️ THE 3 R's — REDUCE, REUSE, RECYCLE!</h3>
+<p>These are the three most important things we can do!</p>
+<h3>1️⃣ REDUCE — Use Less! 📉</h3>
+<ul><li>Turn off lights when you leave a room 💡</li><li>Don't leave taps running while brushing teeth 🚰</li><li>Use both sides of paper before recycling 📄</li><li>Say NO to plastic bags — bring your own bag 🛍️</li><li>Don't waste food — take only what you can eat 🍽️</li></ul>
+<h3>2️⃣ REUSE — Use Again! 🔄</h3>
+<ul><li>Use a reusable water bottle instead of buying plastic bottles 💧</li><li>Use old jars as storage containers 🫙</li><li>Donate old clothes and toys instead of throwing them away 👕</li><li>Use scrap paper for notes 📝</li><li>Repair things instead of replacing them 🔧</li></ul>
+<h3>3️⃣ RECYCLE — Turn Old into New! ♻️</h3>
+<ul><li>Paper → New paper 📄</li><li>Plastic bottles → New bottles, clothing, or playground equipment!</li><li>Glass bottles → New glass bottles 🫙</li><li>Metal cans → New metal products!</li><li>Food scraps → Compost → New soil → New plants! 🌱</li></ul>
+<h3>🌱 How YOU Can Help — Your Action Plan!</h3>
+<p>Here are 10 things you can do right now to help:</p>
+<table><thead><tr><th>#</th><th>Action</th><th>Why it helps</th></tr></thead><tbody><tr><td>1</td><td>Turn off lights 💡</td><td>Saves electricity</td></tr><tr><td>2</td><td>Use a reusable bottle 💧</td><td>Fewer plastic bottles!</td></tr><tr><td>3</td><td>Sort your rubbish ♻️</td><td>Recycling works!</td></tr><tr><td>4</td><td>Plant a tree or flower 🌳🌸</td><td>More clean air!</td></tr><tr><td>5</td><td>Don't waste food 🍎</td><td>Less food in landfills</td></tr><tr><td>6</td><td>Walk or bike instead of driving 🚶</td><td>Less car pollution</td></tr><tr><td>7</td><td>Turn off the tap while brushing 🪥</td><td>Saves water</td></tr><tr><td>8</td><td>Use less paper 📄</td><td>Saves trees</td></tr><tr><td>9</td><td>Pick up litter you see 🗑️</td><td>Cleaner parks and oceans</td></tr><tr><td>10</td><td>Tell a friend what you've learned 🗣️</td><td>Multiply the impact!</td></tr></tbody></table>
+<h3>🐢 Animals That Need Our Help</h3>
+<p>Many animals are in danger because their homes are being destroyed:</p>
+<table><thead><tr><th>Animal</th><th>Habitat</th><th>Danger</th></tr></thead><tbody><tr><td>🐢 Sea Turtles</td><td>Oceans</td><td>Plastic pollution — they mistake plastic bags for jellyfish!</td></tr><tr><td>🐼 Giant Pandas</td><td>Bamboo forests, China</td><td>Habitat loss (forests cut down)</td></tr><tr><td>🐧 Emperor Penguins</td><td>Antarctica</td><td>Climate change — sea ice is melting</td></tr><tr><td>🦍 Orangutans</td><td>Rainforests, Borneo</td><td>Deforestation (forest clearing)</td></tr><tr><td>🐋 Blue Whales</td><td>Oceans</td><td>Pollution and ship noise</td></tr></tbody></table>
+<h3>🌈 10 THINGS I PROMISE TO DO FOR OUR PLANET</h3>
+<p>Complete this promise list! Write at least 5 things you will do:</p>
+<pre><code>1. _________________________________________________
+2. _________________________________________________
+3. _________________________________________________
+4. _________________________________________________
+5. _________________________________________________
+6. _________________________________________________
+7. _________________________________________________</code></pre></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>🟢 Your Mission</h3>
+<p><strong>Answer these questions:</strong></p>
+<ol><li>What do the 3 R's stand for?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>Why should we not throw plastic bags into the ocean?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>Name one animal that is in danger because of habitat loss:</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>What happens when you turn off a tap while brushing your teeth?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>Why should we plant more trees?</li></ol>
+<p>→ ___________________________________</p>
+<h3>🏆 CONGRATULATIONS — YOU COMPLETED ALL 5 WEEKS! 🏆</h3>
+<p><strong>What an amazing learner you are!</strong> 🎉</p>
+<p>You've mastered:</p>
+<ul><li>➕ 3-digit addition & subtraction with carrying and borrowing</li><li>🔄 Synonyms — words that mean the same thing</li><li>🪐 The Solar System and all 8 planets</li><li>⛵ Famous Explorers from history</li><li>🧭 How to read maps and find directions</li><li>➗ Division and fair sharing</li><li>🗣️ 4 types of sentences</li><li>🌱 Parts of a plant and photosynthesis</li><li>🏛️ Ancient China — inventions and wonders</li><li>🦺 Community safety and emergency numbers</li><li>⏰ Reading clocks and AM vs PM</li><li>✏️ Punctuation — periods, commas, question marks, exclamation points!</li><li>🧊 Solids, liquids, and gases</li><li>🔥 The Great Fire of London</li><li>💰 Needs vs wants and saving money</li><li>🍕 Fractions — halves, quarters, thirds</li><li>🎶 Writing your own poem!</li><li>🫀 The human body — heart, lungs, brain, stomach</li><li>🚀 Transport through history</li><li>🌍 Protecting our planet</li></ul>
+<p><strong>You are officially a SUPER LEARNER!</strong> 🌟</p>
+<p><em>Well done, Zane! Keep being curious, keep asking questions, and keep learning — the world is yours to explore! 🚀</em></p></div></section>
+  </main>
+
+  <div class="badge-row" id="badge">
+    <div class="badge-info">
+      <div class="lbl">Badge Earned!</div>
+      <div class="nm">Planet Protector</div>
+      <div class="sub">You earned it — show Dad!</div>
+    </div>
+    <div class="badge-medal">★</div>
+    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Zane's Week 7</span></div>
+  </div>
+
+  <footer class="foot">
+    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Zane</span>
+    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-28</span>
+  </footer>
+</div>
+</body>
+</html>
