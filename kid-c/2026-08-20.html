@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zane — English · Tuesday 2026-08-11</title>
+<title>Kid C — History · Thursday 2026-08-20</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
 
@@ -102,6 +102,55 @@
       margin-top: 4px;
       font-weight: 400;
       text-shadow: none;
+    }
+
+    /* HERO BANNER — watercolor Usborne-style illustration above the title */
+    .hero-banner {
+      position: relative;
+      margin: -16px -16px 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--rule);
+      box-shadow:
+        0 4px 14px rgba(0,0,0,0.08),
+        inset 0 0 0 1px var(--paper);
+      background: var(--paper);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .hero-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(251, 241, 220, 0.94);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+      color: var(--deep);
+      border: 1.5px solid var(--rule);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .hero-tag {
+      letter-spacing: 0.5px;
+    }
+    .hero-fallback {
+      display: none;
+      padding: 28px 16px;
+      text-align: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: var(--deep);
+      opacity: 0.6;
     }
 
     .head-meta {
@@ -365,6 +414,9 @@
       .head-title { font-size: 42px; }
       .badge-row { grid-template-columns: 1fr; text-align: center; }
       .badge-stars { text-align: center; }
+      .hero-img { max-height: 200px; }
+      .hero-caption { font-size: 14px; padding: 4px 10px; }
+      .hero-banner { margin: -8px -8px 16px; }
     }
     </style>
 </head>
@@ -403,6 +455,15 @@
   <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
 </svg></div>
 
+  <figure class="hero-banner">
+    <img src="../assets/heroes/kid-c.png" alt="Kid C's adventure" class="hero-img" loading="lazy" decoding="async" onerror="this.parentNode.querySelector('.hero-fallback').style.display='block';this.style.display='none';">
+    <div class="hero-fallback">Today's Adventure</div>
+    <figcaption class="hero-caption">
+      <span class="hero-tag">Today's Adventure</span>
+      <span>🦊</span>
+    </figcaption>
+  </figure>
+
   <header class="head">
     <div class="mascot">
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -420,64 +481,58 @@
   <rect x="64" y="106" width="10" height="6" rx="3" fill="#D87437"/>
 </svg></div>
     <div>
-      <div class="head-title">✍️ Rhyming and Poetry — Words That Sing Together! 🎶<small>English with Zane</small></div>
+      <div class="head-title">🏺 Transport Through Time — From Horses to Rockets! 🐴→🚀<small>History with Kid C</small></div>
     </div>
     <div class="head-meta">
-      <span class="day">🔥 Tuesday</span>
-      <span class="date">Tuesday 11 August 2026</span>
+      <span class="day">⚡ Thursday</span>
+      <span class="date">Thursday 20 August 2026</span>
       <span class="grade">Grade 3 · Age 8</span>
     </div>
   </header>
 
-  <div class="subject">✍️ English · Week 5 · Tuesday's lesson</div>
+  <div class="subject">🏺 History · Week 6 · Thursday's lesson</div>
 
   <main>
-    <section class="section teach"><p><strong>Words can make music! When two words end with the same sound, they rhyme — and that makes poetry! 🎤</strong></p>
-<h3>🎵 What is Rhyme?</h3>
-<p>Two words <strong>rhyme</strong> when they end with the same sound.</p>
-<table><thead><tr><th>Word</th><th>Rhymes with</th><th>Why?</th></tr></thead><tbody><tr><td>Cat</td><td>Hat, Bat, Rat, Mat</td><td>All end with the "-at" sound</td></tr><tr><td>Moon</td><td>Spoon, Balloon, June</td><td>All end with the "-oon" sound</td></tr><tr><td>Star</td><td>Car, Far, Bar</td><td>All end with the "-ar" sound</td></tr><tr><td>Light</td><td>Night, Bright, Flight, White</td><td>All end with the "-ight" sound</td></tr><tr><td>Bee</td><td>Tree, Sea, Free, Knee</td><td>All end with the "-ee" sound</td></tr></tbody></table>
-<h3>🎯 Rhyme Schemes — The Pattern in Poems</h3>
-<p>Poets arrange rhymes in patterns called <strong>rhyme schemes</strong>. Each new rhyme gets a new letter!</p>
-<p><strong>Example — AABB Pattern (first two lines rhyme, last two lines rhyme):</strong></p>
-<blockquote>The <strong>cat</strong> sat on the <strong>mat</strong> 🐱 ← A She wore a little <strong>hat</strong> 🧢 ← A (rhymes with "mat"!)  The <strong>dog</strong> ran in the <strong>fog</strong> 🌫️ ← B He fell and landed with a <strong>log</strong> 🪵 ← B (rhymes with "fog"!)</blockquote>
-<p><strong>Example — ABAB Pattern:</strong></p>
-<blockquote>The <strong>sun</strong> is very bright 🌞 ← A I see it in the <strong>sky</strong> ☁️ ← B The <strong>sun</strong> gives us warm light 🌞 ← A I wonder how <strong>high</strong> it can fly! ☁️ ← B (rhymes with "sky"!)</blockquote>
-<h3>🌟 A Simple Poem — Read It!</h3>
-<p>Here's a poem about a mouse:</p>
-<blockquote>🐭 <strong>My Little Mouse</strong>  A tiny mouse in a little <strong>house</strong> 🏠 Chewing on a piece of <strong>cheese</strong> 🧀 Round and round she likes to <strong>scouse</strong> Happy little mouse at <strong>ease</strong> 😊</blockquote>
-<p><em>(Lines 1 & 2 rhyme [A], lines 3 & 4 rhyme [B])</em></p></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>✍️ Your Turn — Write Your Own Poem!</h3>
-<p><strong>Step 1:</strong> Pick a topic (choose one):</p>
-<ul><li>🌧️ Rain</li><li>🌙 Night</li><li>🐸 A Frog</li><li>🍕 Pizza</li><li>☀️ The Sun</li></ul>
-<p><strong>Step 2:</strong> Pick a rhyming word to end each line (examples below):</p>
-<blockquote>If you chose <strong>Rain</strong>: Words that rhyme: <em>Rain, Pain, Train, Lane, Brain, Plane</em></blockquote>
-<blockquote>If you chose <strong>Pizza</strong>: Words that rhyme: <em>Pizza, Wishes, Dishes, Splendid things</em></blockquote>
-<p><strong>Step 3:</strong> Write your 4-line poem!</p>
-<pre><code>Line 1 (ending word): ___________________
-Line 2 (same rhyme): ___________________
-Line 3 (new ending): ___________________
-Line 4 (same rhyme): ___________________</code></pre>
-<p><strong>Here's my example — you write yours!</strong></p>
-<blockquote>🍕 <strong>My Pizza Poem</strong> (example)  I love to eat a yummy <strong>pizza</strong> 🍕 The cheese and tomato are my <strong>favourites</strong> 💛 Round and flat, it couldn't be <strong>bigger</strong> 📏 Every slice is pure <strong>delight</strong>! ✨</blockquote>
-<h3>🟢 Your Mission</h3>
-<p><strong>Find the rhyming words in each group:</strong></p>
-<ol><li>Moon, Cat, Spoon, Balloon → Words that rhyme: _______________________</li><li>Dog, Frog, Star, Log → Words that rhyme: _______________________</li><li>Red, Bed, Sun, Pen → Words that rhyme with "red" and "bed": _______________________</li></ol>
-<p><strong>Write your own poem (minimum 4 lines):</strong></p>
-<p>_______________________________________________________________ _______________________________________________________________ _______________________________________________________________ _______________________________________________________________</p></div></section>
+    <section class="section teach"><p><strong>Long ago, the fastest way to travel was on a horse! Now we can fly to the other side of the world in hours! Let's travel through time! ⏳</strong></p>
+<h3>🐴 ANCIENT TIMES — Powered by Animals and Humans</h3>
+<table><thead><tr><th>Era</th><th>Transport</th><th>How fast?</th></tr></thead><tbody><tr><td>Prehistoric</td><td>Walking, running 🏃</td><td>Very slow!</td></tr><tr><td>~3,500 BCE</td><td>Domestication of horses 🐴</td><td>Faster than walking!</td></tr><tr><td>Ancient Egypt</td><td>Chariots pulled by horses 🏛️</td><td>~20–30 km/h</td></tr><tr><td>Ancient Rome</td><td>Chariots, carriages 🚗</td><td>~20 km/h</td></tr><tr><td>~100 BCE</td><td>Sailing ships ⛵</td><td>依赖风力 wind!</td></tr></tbody></table>
+<h3>🚢 THE AGE OF SAIL — 1400s–1700s</h3>
+<ul><li>Big sailing ships explored the world!</li><li><strong>Christopher Columbus</strong> crossed the Atlantic in 1492 in a sailing ship called the <strong>Santa María</strong> 🛶</li><li>Ships could travel about <strong>150–200 km per day</strong> with good wind.</li></ul>
+<h3>🚂 THE INDUSTRIAL REVOLUTION — 1800s</h3>
+<p>This changed EVERYTHING!</p>
+<table><thead><tr><th>Year</th><th>Invention</th><th>Why it's amazing</th></tr></thead><tbody><tr><td>1804</td><td><strong>Steam locomotive</strong> 🚂 (by Richard Trevithick)</td><td>First train — moved along rails!</td></tr><tr><td>1825</td><td>First public railway 🛤️</td><td>People could travel faster than ever before</td></tr><tr><td>1830</td><td><strong>Steamships</strong> 🚢</td><td>Ships that didn't need wind — could travel in any direction!</td></tr><tr><td>1886</td><td><strong>First car</strong> 🚗 (Karl Benz, Germany)</td><td>A carriage without horses!</td></tr><tr><td>1903</td><td><strong>First aeroplane</strong> ✈️ (Wright Brothers)</td><td>Humans FLEW!</td></tr></tbody></table>
+<h3>🚗 THE CAR REVOLUTION — 1900s</h3>
+<table><thead><tr><th>Year</th><th>Milestone</th></tr></thead><tbody><tr><td>1908</td><td>Ford Model T — first mass-produced car (affordable!)</td></tr><tr><td>1920s</td><td>Cars became common on roads</td></tr><tr><td>1950s–60s</td><td>Motorways/highways built worldwide</td></tr><tr><td>2000s</td><td>Electric cars (zero fuel, cleaner!)</td></tr><tr><td>Today</td><td>Self-driving cars beginning! 🤖</td></tr></tbody></table>
+<h3>✈️ THE AVIATION AGE — 1900s to Now</h3>
+<table><thead><tr><th>Year</th><th>Milestone</th></tr></thead><tbody><tr><td>1903</td><td>Wright Brothers — first powered flight (12 seconds!)</td></tr><tr><td>1914</td><td>First commercial aeroplane flight</td></tr><tr><td>1947</td><td>Sound barrier BROKEN — planes fly faster than sound!</td></tr><tr><td>1958</td><td>First passenger jet (Boeing 707)</td></tr><tr><td>1970s</td><td>Jumbo jets — 400+ passengers!</td></tr><tr><td>2005</td><td>A380 Superjumbo — largest passenger plane ever built</td></tr><tr><td>Today</td><td>Hypersonic jets being developed (would go London to Sydney in 4 hours!)</td></tr></tbody></table>
+<h3>🚀 THE SPACE AGE — Beyond Earth!</h3>
+<table><thead><tr><th>Year</th><th>Achievement</th></tr></thead><tbody><tr><td>1957</td><td>Sputnik 1 — first satellite in space 🛰️</td></tr><tr><td>1961</td><td>Yuri Gagarin — first human in space! 🌌</td></tr><tr><td>1969</td><td>Apollo 11 — first humans on the Moon! 🌙</td></tr><tr><td>1971</td><td>First space station</td></tr><tr><td>1990</td><td>Hubble Space Telescope launched — photos of distant galaxies!</td></tr><tr><td>2020s</td><td>Mars exploration rovers — robots on another planet! 🔴</td></tr></tbody></table></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>🟢 Your Mission</h3>
+<p><strong>Answer these questions:</strong></p>
+<ol><li>Who built the first airplane? (First and last name)</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>What powered the first trains before engines ran on petrol?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>In what year did humans first land on the Moon?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>What was the name of Christopher Columbus's ship?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li><strong>Bonus:</strong> If you could invent a new type of transport, what would it be and why?</li></ol>
+<p>→ ___________________________________</p></div></section>
   </main>
 
   <div class="badge-row" id="badge">
     <div class="badge-info">
       <div class="lbl">Badge Earned!</div>
-      <div class="nm">Poet Laureate</div>
+      <div class="nm">Time Traveller</div>
       <div class="sub">You earned it — show Dad!</div>
     </div>
     <div class="badge-medal">★</div>
-    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Zane's Week 5</span></div>
+    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Kid C's Week 6</span></div>
   </div>
 
   <footer class="foot">
-    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Zane</span>
-    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-11</span>
+    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Kid C</span>
+    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-20</span>
   </footer>
 </div>
 </body>

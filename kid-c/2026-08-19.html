@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zane — History · Thursday 2026-08-13</title>
+<title>Kid C — Science · Wednesday 2026-08-19</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
 
@@ -102,6 +102,55 @@
       margin-top: 4px;
       font-weight: 400;
       text-shadow: none;
+    }
+
+    /* HERO BANNER — watercolor Usborne-style illustration above the title */
+    .hero-banner {
+      position: relative;
+      margin: -16px -16px 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--rule);
+      box-shadow:
+        0 4px 14px rgba(0,0,0,0.08),
+        inset 0 0 0 1px var(--paper);
+      background: var(--paper);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .hero-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(251, 241, 220, 0.94);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+      color: var(--deep);
+      border: 1.5px solid var(--rule);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .hero-tag {
+      letter-spacing: 0.5px;
+    }
+    .hero-fallback {
+      display: none;
+      padding: 28px 16px;
+      text-align: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: var(--deep);
+      opacity: 0.6;
     }
 
     .head-meta {
@@ -365,6 +414,9 @@
       .head-title { font-size: 42px; }
       .badge-row { grid-template-columns: 1fr; text-align: center; }
       .badge-stars { text-align: center; }
+      .hero-img { max-height: 200px; }
+      .hero-caption { font-size: 14px; padding: 4px 10px; }
+      .hero-banner { margin: -8px -8px 16px; }
     }
     </style>
 </head>
@@ -403,6 +455,15 @@
   <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
 </svg></div>
 
+  <figure class="hero-banner">
+    <img src="../assets/heroes/kid-c.png" alt="Kid C's adventure" class="hero-img" loading="lazy" decoding="async" onerror="this.parentNode.querySelector('.hero-fallback').style.display='block';this.style.display='none';">
+    <div class="hero-fallback">Today's Adventure</div>
+    <figcaption class="hero-caption">
+      <span class="hero-tag">Today's Adventure</span>
+      <span>🦊</span>
+    </figcaption>
+  </figure>
+
   <header class="head">
     <div class="mascot">
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -420,58 +481,72 @@
   <rect x="64" y="106" width="10" height="6" rx="3" fill="#D87437"/>
 </svg></div>
     <div>
-      <div class="head-title">🏺 Transport Through Time — From Horses to Rockets! 🐴→🚀<small>History with Zane</small></div>
+      <div class="head-title">🔬 The Human Body — The Amazing Machine Inside You! 🫀🫁🧠<small>Science with Kid C</small></div>
     </div>
     <div class="head-meta">
-      <span class="day">⚡ Thursday</span>
-      <span class="date">Thursday 13 August 2026</span>
+      <span class="day">🌊 Wednesday</span>
+      <span class="date">Wednesday 19 August 2026</span>
       <span class="grade">Grade 3 · Age 8</span>
     </div>
   </header>
 
-  <div class="subject">🏺 History · Week 5 · Thursday's lesson</div>
+  <div class="subject">🔬 Science · Week 6 · Wednesday's lesson</div>
 
   <main>
-    <section class="section teach"><p><strong>Long ago, the fastest way to travel was on a horse! Now we can fly to the other side of the world in hours! Let's travel through time! ⏳</strong></p>
-<h3>🐴 ANCIENT TIMES — Powered by Animals and Humans</h3>
-<table><thead><tr><th>Era</th><th>Transport</th><th>How fast?</th></tr></thead><tbody><tr><td>Prehistoric</td><td>Walking, running 🏃</td><td>Very slow!</td></tr><tr><td>~3,500 BCE</td><td>Domestication of horses 🐴</td><td>Faster than walking!</td></tr><tr><td>Ancient Egypt</td><td>Chariots pulled by horses 🏛️</td><td>~20–30 km/h</td></tr><tr><td>Ancient Rome</td><td>Chariots, carriages 🚗</td><td>~20 km/h</td></tr><tr><td>~100 BCE</td><td>Sailing ships ⛵</td><td>依赖风力 wind!</td></tr></tbody></table>
-<h3>🚢 THE AGE OF SAIL — 1400s–1700s</h3>
-<ul><li>Big sailing ships explored the world!</li><li><strong>Christopher Columbus</strong> crossed the Atlantic in 1492 in a sailing ship called the <strong>Santa María</strong> 🛶</li><li>Ships could travel about <strong>150–200 km per day</strong> with good wind.</li></ul>
-<h3>🚂 THE INDUSTRIAL REVOLUTION — 1800s</h3>
-<p>This changed EVERYTHING!</p>
-<table><thead><tr><th>Year</th><th>Invention</th><th>Why it's amazing</th></tr></thead><tbody><tr><td>1804</td><td><strong>Steam locomotive</strong> 🚂 (by Richard Trevithick)</td><td>First train — moved along rails!</td></tr><tr><td>1825</td><td>First public railway 🛤️</td><td>People could travel faster than ever before</td></tr><tr><td>1830</td><td><strong>Steamships</strong> 🚢</td><td>Ships that didn't need wind — could travel in any direction!</td></tr><tr><td>1886</td><td><strong>First car</strong> 🚗 (Karl Benz, Germany)</td><td>A carriage without horses!</td></tr><tr><td>1903</td><td><strong>First aeroplane</strong> ✈️ (Wright Brothers)</td><td>Humans FLEW!</td></tr></tbody></table>
-<h3>🚗 THE CAR REVOLUTION — 1900s</h3>
-<table><thead><tr><th>Year</th><th>Milestone</th></tr></thead><tbody><tr><td>1908</td><td>Ford Model T — first mass-produced car (affordable!)</td></tr><tr><td>1920s</td><td>Cars became common on roads</td></tr><tr><td>1950s–60s</td><td>Motorways/highways built worldwide</td></tr><tr><td>2000s</td><td>Electric cars (zero fuel, cleaner!)</td></tr><tr><td>Today</td><td>Self-driving cars beginning! 🤖</td></tr></tbody></table>
-<h3>✈️ THE AVIATION AGE — 1900s to Now</h3>
-<table><thead><tr><th>Year</th><th>Milestone</th></tr></thead><tbody><tr><td>1903</td><td>Wright Brothers — first powered flight (12 seconds!)</td></tr><tr><td>1914</td><td>First commercial aeroplane flight</td></tr><tr><td>1947</td><td>Sound barrier BROKEN — planes fly faster than sound!</td></tr><tr><td>1958</td><td>First passenger jet (Boeing 707)</td></tr><tr><td>1970s</td><td>Jumbo jets — 400+ passengers!</td></tr><tr><td>2005</td><td>A380 Superjumbo — largest passenger plane ever built</td></tr><tr><td>Today</td><td>Hypersonic jets being developed (would go London to Sydney in 4 hours!)</td></tr></tbody></table>
-<h3>🚀 THE SPACE AGE — Beyond Earth!</h3>
-<table><thead><tr><th>Year</th><th>Achievement</th></tr></thead><tbody><tr><td>1957</td><td>Sputnik 1 — first satellite in space 🛰️</td></tr><tr><td>1961</td><td>Yuri Gagarin — first human in space! 🌌</td></tr><tr><td>1969</td><td>Apollo 11 — first humans on the Moon! 🌙</td></tr><tr><td>1971</td><td>First space station</td></tr><tr><td>1990</td><td>Hubble Space Telescope launched — photos of distant galaxies!</td></tr><tr><td>2020s</td><td>Mars exploration rovers — robots on another planet! 🔴</td></tr></tbody></table></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>🟢 Your Mission</h3>
+    <section class="section teach"><p><strong>Your body is one of the most incredible machines ever built — and you live inside it! 🦸</strong></p>
+<p>There are <strong> trillions</strong> (millions of millions!) of tiny living things called <strong>cells</strong> working together inside you. They are so small you can't see them without a microscope!</p>
+<h3>🫀 THE HEART — Your Body's Pump</h3>
+<ul><li>Your heart is about the <strong>size of your fist</strong> — and it never stops beating!</li><li>It beats approximately <strong>70-100 times per minute</strong> — that's over 100,000 beats every day!</li><li>It pumps <strong>blood</strong> all around your body through <strong>veins</strong> and <strong>arteries</strong> (tubes).</li><li>Blood carries <strong>oxygen</strong> (from the lungs) and <strong>food energy</strong> to every part of your body.</li></ul>
+<pre><code>  ❤️ THE HEART
+
+       1️⃣ Right side ← Receives used blood from the body
+       ↑                      (full of CO₂, no oxygen)
+       ↓
+       Pumps to LUNGS ← Blood gets fresh oxygen here!
+       ↑
+       ↓
+       2️⃣ Left side ← Receives fresh blood from the lungs
+       ↑                      (full of oxygen!)
+       ↓
+       Pumps to WHOLE BODY ← Fresh oxygen delivered!</code></pre>
+<h3>🫁 THE LUNGS — Your Body's Air Filters</h3>
+<ul><li>You have <strong>two lungs</strong> — they fill up with air when you breathe in.</li><li>The lungs take <strong>oxygen</strong> from the air and pass it into your blood.</li><li>When you breathe out, your lungs push out <strong>carbon dioxide</strong> (CO₂) — the waste gas.</li><li>Your lungs have millions of tiny air pockets called <strong>alveoli</strong> — if you spread them out flat, they'd cover a whole tennis court!</li></ul>
+<table><thead><tr><th>Action</th><th>What happens</th></tr></thead><tbody><tr><td>Breathe IN (inhale)</td><td>Lungs fill with air, oxygen enters blood</td></tr><tr><td>Breathe OUT (exhale)</td><td>Lungs push out CO₂ (the waste gas)</td></tr></tbody></table>
+<h3>🧠 THE BRAIN — Your Body's Command Centre</h3>
+<ul><li>The brain is the <strong>boss</strong> of your whole body!</li><li>It controls <strong>everything</strong>: thinking, memory, movement, emotions, breathing, heartbeat, and even your dreams when you sleep!</li><li>Your brain has <strong>three main parts</strong>:</li></ul>
+<table><thead><tr><th>Part</th><th>What it does</th></tr></thead><tbody><tr><td>🧠 <strong>Cerebrum</strong></td><td>Thinking, learning, memory, imagination, 5 senses</td></tr><tr><td>🔄 <strong>Cerebellum</strong></td><td>Balance, coordination, moving smoothly</td></tr><tr><td>🌊 <strong>Brain stem</strong></td><td>Automatic things: heartbeat, breathing, digestion</td></tr></tbody></table>
+<ul><li>Your brain is soft like <strong>jelly</strong> — that's why you have a <strong>skull</strong> (hard bone) around it to protect it! 🛡️</li></ul>
+<h3>🫃 THE STOMACH — Your Food Processor</h3>
+<ul><li>When you eat, food goes down a tube called the <strong>oesophagus</strong> (food pipe) into your stomach.</li><li>Your stomach is like a <strong>mixing machine</strong> — it churns food around with acids and enzymes (special chemicals) until it becomes a soft mush.</li><li>This takes <strong>2–4 hours</strong>!</li><li>Then the food moves into the <strong>small intestine</strong>, where the nutrients (good stuff!) are absorbed into the blood.</li><li>The waste goes to the <strong>large intestine</strong> and then leaves the body!</li></ul>
+<h3>🦵 Other Important Organs</h3>
+<table><thead><tr><th>Organ</th><th>What it does</th></tr></thead><tbody><tr><td>🫘 <strong>Liver</strong></td><td>Cleans the blood, stores energy, makes bile (for digestion)</td></tr><tr><td>🫘 <strong>Kidneys</strong></td><td>Filter waste from blood, make urine</td></tr><tr><td>💪 <strong>Muscles</strong></td><td>Move your body — you have over 600 muscles!</td></tr><tr><td>🦴 <strong>Bones</strong></td><td>Give your body shape, protect organs, make blood cells</td></tr></tbody></table></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>🟢 Your Mission</h3>
 <p><strong>Answer these questions:</strong></p>
-<ol><li>Who built the first airplane? (First and last name)</li></ol>
+<ol><li>What does the <strong>heart</strong> do? (What does it pump?)</li></ol>
 <p>→ ___________________________________</p>
-<ol><li>What powered the first trains before engines ran on petrol?</li></ol>
+<ol><li>What gas do the lungs take IN from the air?</li></ol>
 <p>→ ___________________________________</p>
-<ol><li>In what year did humans first land on the Moon?</li></ol>
+<ol><li>What gas do the lungs push OUT when you breathe?</li></ol>
 <p>→ ___________________________________</p>
-<ol><li>What was the name of Christopher Columbus's ship?</li></ol>
+<ol><li>What is the <strong>brain</strong> protected by? (Hint: it's a bone!)</li></ol>
 <p>→ ___________________________________</p>
-<ol><li><strong>Bonus:</strong> If you could invent a new type of transport, what would it be and why?</li></ol>
-<p>→ ___________________________________</p></div></section>
+<ol><li>How many muscles do you have in your body? (Approximately!)</li></ol>
+<p>→ ___________________________________</p>
+<p><strong>Label the Organs!</strong> Draw a simple body outline and label: heart, lungs, brain, stomach. 🔬</p></div></section>
   </main>
 
   <div class="badge-row" id="badge">
     <div class="badge-info">
       <div class="lbl">Badge Earned!</div>
-      <div class="nm">Time Traveller</div>
+      <div class="nm">Body Boss</div>
       <div class="sub">You earned it — show Dad!</div>
     </div>
     <div class="badge-medal">★</div>
-    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Zane's Week 5</span></div>
+    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Kid C's Week 6</span></div>
   </div>
 
   <footer class="foot">
-    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Zane</span>
-    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-13</span>
+    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Kid C</span>
+    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-19</span>
   </footer>
 </div>
 </body>

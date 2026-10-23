@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alicia — Science · Wednesday 2026-08-12</title>
+<title>Kid B — Today · Friday 2026-08-28</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
 
     :root {
-      --primary: #C8553D;
-      --secondary: #F4E1B6;
-      --accent: #E89F71;
-      --deep: #3D2817;
+      --primary: #2C3E50;
+      --secondary: #D6DEE6;
+      --accent: #C7553D;
+      --deep: #1A2530;
       --paper: #FBF1DC;
       --rule: #D8B98A;
     }
@@ -102,6 +102,55 @@
       margin-top: 4px;
       font-weight: 400;
       text-shadow: none;
+    }
+
+    /* HERO BANNER — watercolor Usborne-style illustration above the title */
+    .hero-banner {
+      position: relative;
+      margin: -16px -16px 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--rule);
+      box-shadow:
+        0 4px 14px rgba(0,0,0,0.08),
+        inset 0 0 0 1px var(--paper);
+      background: var(--paper);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .hero-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(251, 241, 220, 0.94);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+      color: var(--deep);
+      border: 1.5px solid var(--rule);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .hero-tag {
+      letter-spacing: 0.5px;
+    }
+    .hero-fallback {
+      display: none;
+      padding: 28px 16px;
+      text-align: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: var(--deep);
+      opacity: 0.6;
     }
 
     .head-meta {
@@ -365,6 +414,9 @@
       .head-title { font-size: 42px; }
       .badge-row { grid-template-columns: 1fr; text-align: center; }
       .badge-stars { text-align: center; }
+      .hero-img { max-height: 200px; }
+      .hero-caption { font-size: 14px; padding: 4px 10px; }
+      .hero-banner { margin: -8px -8px 16px; }
     }
     </style>
 </head>
@@ -372,96 +424,97 @@
 <div class="page">
   <div class="flourish tl">
 <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#C8553D" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="12" cy="12" r="3" fill="#C8553D"/>
-  <circle cx="22" cy="22" r="2" fill="#C8553D"/>
-  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#C8553D" stroke-width="1.5"/>
-  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#C8553D" stroke-width="1.5"/>
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#2C3E50"/>
+  <circle cx="22" cy="22" r="2" fill="#2C3E50"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
 </svg></div>
   <div class="flourish tr">
 <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#C8553D" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="12" cy="12" r="3" fill="#C8553D"/>
-  <circle cx="22" cy="22" r="2" fill="#C8553D"/>
-  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#C8553D" stroke-width="1.5"/>
-  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#C8553D" stroke-width="1.5"/>
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#2C3E50"/>
+  <circle cx="22" cy="22" r="2" fill="#2C3E50"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
 </svg></div>
   <div class="flourish bl">
 <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#C8553D" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="12" cy="12" r="3" fill="#C8553D"/>
-  <circle cx="22" cy="22" r="2" fill="#C8553D"/>
-  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#C8553D" stroke-width="1.5"/>
-  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#C8553D" stroke-width="1.5"/>
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#2C3E50"/>
+  <circle cx="22" cy="22" r="2" fill="#2C3E50"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
 </svg></div>
   <div class="flourish br">
 <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#C8553D" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="12" cy="12" r="3" fill="#C8553D"/>
-  <circle cx="22" cy="22" r="2" fill="#C8553D"/>
-  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#C8553D" stroke-width="1.5"/>
-  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#C8553D" stroke-width="1.5"/>
+  <path d="M5 5 Q40 5 40 40 Q5 40 5 5 Z" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#2C3E50"/>
+  <circle cx="22" cy="22" r="2" fill="#2C3E50"/>
+  <path d="M5 30 Q20 32 28 24" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
+  <path d="M30 5 Q32 20 24 28" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
 </svg></div>
+
+  <figure class="hero-banner">
+    <img src="../assets/heroes/kid-b.png" alt="Kid B's adventure" class="hero-img" loading="lazy" decoding="async" onerror="this.parentNode.querySelector('.hero-fallback').style.display='block';this.style.display='none';">
+    <div class="hero-fallback">Today's Adventure</div>
+    <figcaption class="hero-caption">
+      <span class="hero-tag">Today's Adventure</span>
+      <span>🦅</span>
+    </figcaption>
+  </figure>
 
   <header class="head">
     <div class="mascot">
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <ellipse cx="60" cy="80" rx="38" ry="34" fill="#E89F71"/>
-  <ellipse cx="28" cy="80" rx="18" ry="24" fill="#E89F71" opacity="0.85"/>
-  <ellipse cx="92" cy="80" rx="18" ry="24" fill="#E89F71" opacity="0.85"/>
-  <circle cx="60" cy="50" r="32" fill="#E89F71"/>
-  <polygon points="34,22 44,46 26,42" fill="#E89F71"/>
-  <polygon points="86,22 76,46 94,42" fill="#E89F71"/>
-  <circle cx="46" cy="50" r="13" fill="#FBF1DC"/>
-  <circle cx="74" cy="50" r="13" fill="#FBF1DC"/>
-  <circle cx="48" cy="52" r="8" fill="#3D2817"/>
-  <circle cx="76" cy="52" r="8" fill="#3D2817"/>
-  <circle cx="50" cy="49" r="3" fill="#FBF1DC"/>
-  <circle cx="78" cy="49" r="3" fill="#FBF1DC"/>
-  <polygon points="60,58 52,68 68,68" fill="#C8553D"/>
-  <rect x="48" y="108" width="10" height="8" rx="3" fill="#E89F71"/>
-  <rect x="62" y="108" width="10" height="8" rx="3" fill="#E89F71"/>
-  <text x="60" y="92" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="22" fill="#FBF1DC" font-weight="700">ABC</text>
+  <path d="M10 50 Q30 30 60 50 L50 70 Q30 60 10 70 Z" fill="#8B5A2B" opacity="0.9"/>
+  <path d="M110 50 Q90 30 60 50 L70 70 Q90 60 110 70 Z" fill="#8B5A2B" opacity="0.9"/>
+  <ellipse cx="60" cy="62" rx="22" ry="26" fill="#8B5A2B"/>
+  <circle cx="60" cy="38" r="22" fill="#8B5A2B"/>
+  <polygon points="48,18 54,38 42,36" fill="#8B5A2B"/>
+  <polygon points="72,18 66,38 78,36" fill="#8B5A2B"/>
+  <circle cx="52" cy="40" r="6" fill="#FBF1DC"/>
+  <circle cx="68" cy="40" r="6" fill="#FBF1DC"/>
+  <circle cx="53" cy="40" r="3" fill="#1A2530"/>
+  <circle cx="69" cy="40" r="3" fill="#1A2530"/>
+  <polygon points="60,46 52,56 68,56" fill="#C7553D"/>
+  <path d="M30 88 Q60 96 90 88" stroke="#8B5A2B" stroke-width="6" fill="none" stroke-linecap="round"/>
 </svg></div>
     <div>
-      <div class="head-title">🔬 What Do Plants Need? — The Secret of Growing! 🌱🌻<small>Science with Alicia</small></div>
+      <div class="head-title">🌍 Climate Change — What Is It and What Can We Do?<small>Today with Kid B</small></div>
     </div>
     <div class="head-meta">
-      <span class="day">🌊 Wednesday</span>
-      <span class="date">Wednesday 12 August 2026</span>
-      <span class="grade">Kindergarten · Age 6</span>
+      <span class="day">🌟 Friday</span>
+      <span class="date">Friday 28 August 2026</span>
+      <span class="grade">Grade 5 · Age 10</span>
     </div>
   </header>
 
-  <div class="subject">🔬 Science · Week 5 · Wednesday's lesson</div>
+  <div class="subject">🌍 Today · Week 7 · Friday's lesson</div>
 
   <main>
-    <section class="section teach"><p><strong>Plants are ALIVE! And they need special things to grow big and strong!</strong></p>
-<p><strong>🌟 The 4 Magic Things Plants Need:</strong></p>
-<p><strong>1. ☀️ SUNLIGHT — The Energy Source!</strong> The sun gives plants energy to make their own food! Without sun, plants become weak and pale! 🌻 Plants turn toward the sun to get as much light as possible!</p>
-<p><strong>2. 💧 WATER — The Drink!</strong> Plants need water to stay alive, just like us! Water travels through the stem to every part of the plant! 💧 Without water, plants droop and wilt (get all soft and sad)!</p>
-<p><strong>3. 🌍 SOIL / DIRT — The Food Bank!</strong> The soil holds nutrients (good stuff) that plants eat through their roots! 🌱 The roots dig deep into the soil to hold the plant steady!</p>
-<p><strong>4. 💨 AIR — The Breath!</strong> Plants breathe air too! They take in carbon dioxide and give out oxygen (which WE breathe)! 🌬️ Good air flow helps plants stay healthy!</p>
-<p><strong>What happens if a plant DOESN'T get one of these things?</strong></p>
-<table><thead><tr><th>Missing</th><th>What happens</th></tr></thead><tbody><tr><td>☀️ Sunlight</td><td>Plant becomes weak, pale, can't make food</td></tr><tr><td>💧 Water</td><td>Plant droops, leaves get dry and crispy</td></tr><tr><td>🌍 Soil</td><td>Plant has nowhere to put roots, falls over</td></tr><tr><td>💨 Air</td><td>Plant can't breathe, gets sick</td></tr></tbody></table>
-<p><strong>Draw the 4 things a plant needs and label them:</strong> ☀️ ___ | 💧 ___ | 🌍 ___ | 💨 ___</p>
-<p><strong>Try this experiment at home! 🌱</strong> Plant a bean seed in a small cup with soil. Give it water and sunlight every day. Watch it grow! Take a photo each day!</p>
-<p><strong>Label the parts of a plant:</strong> 🌻 Flower → 🌸 Bloom 🌿 Leaves → Green parts that catch sunlight 📏 Stem → Holds the plant up 🦶 Roots → Dig into the soil, get water</p></section>
+    <section class="section teach"><p>Earth is warming up — and it's caused by US (humans)! 🌍🔥</p>
+<p><strong>What's happening?</strong></p>
+<ul><li>CO₂ and greenhouse gases trap heat in the atmosphere</li><li>Burning fossil fuels (coal, oil, gas) releases extra CO₂</li><li>Glaciers are melting ❄️</li><li>Sea levels are rising 🌊</li><li>Weather is getting more extreme (hurricanes, floods, droughts)</li></ul>
+<p><strong>What can we do?</strong></p>
+<ul><li>♻️ Reduce, Reuse, Recycle</li><li>🚶 Walk or bike instead of driving</li><li>💡 Turn off lights when not in use</li><li>🌱 Plant trees</li></ul>
+<p><strong>Question:</strong> What is ONE thing you or your family could do to help the environment?</p>
+<p><strong>Kid B's challenge:</strong> Write down 3 changes you can make this week!</p></section>
   </main>
 
   <div class="badge-row" id="badge">
     <div class="badge-info">
       <div class="lbl">Badge Earned!</div>
-      <div class="nm">Plant Doctor</div>
+      <div class="nm">Superstar</div>
       <div class="sub">You earned it — show Dad!</div>
     </div>
     <div class="badge-medal">★</div>
-    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦉 Alicia's Week 5</span></div>
+    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦅 Kid B's Week 7</span></div>
   </div>
 
   <footer class="foot">
-    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Alicia</span>
-    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-12</span>
+    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Kid B</span>
+    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-28</span>
   </footer>
 </div>
 </body>

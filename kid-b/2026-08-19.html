@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matt — Math · Monday 2026-08-10</title>
+<title>Kid B — Science · Wednesday 2026-08-19</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
 
@@ -102,6 +102,55 @@
       margin-top: 4px;
       font-weight: 400;
       text-shadow: none;
+    }
+
+    /* HERO BANNER — watercolor Usborne-style illustration above the title */
+    .hero-banner {
+      position: relative;
+      margin: -16px -16px 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--rule);
+      box-shadow:
+        0 4px 14px rgba(0,0,0,0.08),
+        inset 0 0 0 1px var(--paper);
+      background: var(--paper);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .hero-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(251, 241, 220, 0.94);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+      color: var(--deep);
+      border: 1.5px solid var(--rule);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .hero-tag {
+      letter-spacing: 0.5px;
+    }
+    .hero-fallback {
+      display: none;
+      padding: 28px 16px;
+      text-align: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: var(--deep);
+      opacity: 0.6;
     }
 
     .head-meta {
@@ -365,6 +414,9 @@
       .head-title { font-size: 42px; }
       .badge-row { grid-template-columns: 1fr; text-align: center; }
       .badge-stars { text-align: center; }
+      .hero-img { max-height: 200px; }
+      .hero-caption { font-size: 14px; padding: 4px 10px; }
+      .hero-banner { margin: -8px -8px 16px; }
     }
     </style>
 </head>
@@ -403,6 +455,15 @@
   <path d="M30 5 Q32 20 24 28" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
 </svg></div>
 
+  <figure class="hero-banner">
+    <img src="../assets/heroes/kid-b.png" alt="Kid B's adventure" class="hero-img" loading="lazy" decoding="async" onerror="this.parentNode.querySelector('.hero-fallback').style.display='block';this.style.display='none';">
+    <div class="hero-fallback">Today's Adventure</div>
+    <figcaption class="hero-caption">
+      <span class="hero-tag">Today's Adventure</span>
+      <span>🦅</span>
+    </figcaption>
+  </figure>
+
   <header class="head">
     <div class="mascot">
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -420,25 +481,23 @@
   <path d="M30 88 Q60 96 90 88" stroke="#8B5A2B" stroke-width="6" fill="none" stroke-linecap="round"/>
 </svg></div>
     <div>
-      <div class="head-title">🔢 Data Handling — Bar Graphs and Averages<small>Math with Matt</small></div>
+      <div class="head-title">🔬 Ecosystems — Food Chains and Food Webs<small>Science with Kid B</small></div>
     </div>
     <div class="head-meta">
-      <span class="day">🌙 Monday</span>
-      <span class="date">Monday 10 August 2026</span>
+      <span class="day">🌊 Wednesday</span>
+      <span class="date">Wednesday 19 August 2026</span>
       <span class="grade">Grade 5 · Age 10</span>
     </div>
   </header>
 
-  <div class="subject">🔢 Math · Week 5 · Monday's lesson</div>
+  <div class="subject">🔬 Science · Week 6 · Wednesday's lesson</div>
 
   <main>
-    <section class="section teach"><p><strong>Mean (average)</strong> = sum of all values ÷ number of values</p>
-<p><strong>Example — Test scores:</strong> Sam: 85, Mia: 92, Leo: 78, Nina: 88 Sum = 85+92+78+88 = 343 Mean = 343 ÷ 4 = <strong>85.75</strong></p>
-<p><strong>Practice:</strong> You collected data on favourite sports in your class:</p>
-<ul><li>Football: 12 students</li><li>Basketball: 8 students</li><li>Swimming: 5 students</li><li>Tennis: 3 students</li></ul>
-<p>Draw a bar graph (use paper!). Label each bar and give it a title!</p>
-<p><strong>Find the mean number of students per sport:</strong></p>
-<blockquote>(12+8+5+3) ÷ 4 = 28 ÷ 4 = <strong>7 students average</strong></blockquote></section>
+    <section class="section teach"><p>Everything in nature is CONNECTED! 🔗</p>
+<p><strong>Food chain (a line of who eats whom):</strong> 🌿 Grass → 🐛 Caterpillar → 🐦 Bird → 🦅 Hawk (Producer) → (Primary Consumer) → (Secondary Consumer) → (Tertiary Consumer)</p>
+<p><strong>Key vocabulary:</strong></p>
+<ul><li><strong>Producer</strong> = makes its own food (plants — photosynthesis!)</li><li><strong>Consumer</strong> = eats other living things</li><li><strong>Decomposer</strong> = breaks down dead things (fungi, bacteria)</li></ul>
+<p><strong>What happens if you REMOVE one part?</strong> If all the grass died → caterpillars starve → birds starve → hawks starve Everything collapses! That's why ecosystems are fragile.</p></section>
   </main>
 
   <div class="badge-row" id="badge">
@@ -448,12 +507,12 @@
       <div class="sub">You earned it — show Dad!</div>
     </div>
     <div class="badge-medal">★</div>
-    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦅 Matt's Week 5</span></div>
+    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦅 Kid B's Week 6</span></div>
   </div>
 
   <footer class="foot">
-    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Matt</span>
-    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-10</span>
+    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Kid B</span>
+    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-19</span>
   </footer>
 </div>
 </body>

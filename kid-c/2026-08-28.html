@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zane — Math · Monday 2026-08-10</title>
+<title>Kid C — Today · Friday 2026-08-28</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
 
@@ -102,6 +102,55 @@
       margin-top: 4px;
       font-weight: 400;
       text-shadow: none;
+    }
+
+    /* HERO BANNER — watercolor Usborne-style illustration above the title */
+    .hero-banner {
+      position: relative;
+      margin: -16px -16px 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid var(--rule);
+      box-shadow:
+        0 4px 14px rgba(0,0,0,0.08),
+        inset 0 0 0 1px var(--paper);
+      background: var(--paper);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .hero-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(251, 241, 220, 0.94);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 16px;
+      color: var(--deep);
+      border: 1.5px solid var(--rule);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .hero-tag {
+      letter-spacing: 0.5px;
+    }
+    .hero-fallback {
+      display: none;
+      padding: 28px 16px;
+      text-align: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: var(--deep);
+      opacity: 0.6;
     }
 
     .head-meta {
@@ -365,6 +414,9 @@
       .head-title { font-size: 42px; }
       .badge-row { grid-template-columns: 1fr; text-align: center; }
       .badge-stars { text-align: center; }
+      .hero-img { max-height: 200px; }
+      .hero-caption { font-size: 14px; padding: 4px 10px; }
+      .hero-banner { margin: -8px -8px 16px; }
     }
     </style>
 </head>
@@ -403,6 +455,15 @@
   <path d="M30 5 Q32 20 24 28" fill="none" stroke="#5B7C5A" stroke-width="1.5"/>
 </svg></div>
 
+  <figure class="hero-banner">
+    <img src="../assets/heroes/kid-c.png" alt="Kid C's adventure" class="hero-img" loading="lazy" decoding="async" onerror="this.parentNode.querySelector('.hero-fallback').style.display='block';this.style.display='none';">
+    <div class="hero-fallback">Today's Adventure</div>
+    <figcaption class="hero-caption">
+      <span class="hero-tag">Today's Adventure</span>
+      <span>🦊</span>
+    </figcaption>
+  </figure>
+
   <header class="head">
     <div class="mascot">
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -420,75 +481,77 @@
   <rect x="64" y="106" width="10" height="6" rx="3" fill="#D87437"/>
 </svg></div>
     <div>
-      <div class="head-title">🔢 Fractions — Parts of a Whole (Visual Approach) 🍕<small>Math with Zane</small></div>
+      <div class="head-title">🌍 Looking After Our Planet — Everyone Can Make a Difference! 🌍♻️🌱<small>Today with Kid C</small></div>
     </div>
     <div class="head-meta">
-      <span class="day">🌙 Monday</span>
-      <span class="date">Monday 10 August 2026</span>
+      <span class="day">🌟 Friday</span>
+      <span class="date">Friday 28 August 2026</span>
       <span class="grade">Grade 3 · Age 8</span>
     </div>
   </header>
 
-  <div class="subject">🔢 Math · Week 5 · Monday's lesson</div>
+  <div class="subject">🌍 Today · Week 7 · Friday's lesson</div>
 
   <main>
-    <section class="section teach"><p><strong>Fractions are just fair shares! Let's learn to divide things up equally. 🍕</strong></p>
-<h3>🎯 What is a Fraction?</h3>
-<p>A fraction shows us <strong>one or more parts</strong> of something that has been divided into <strong>equal parts</strong>.</p>
-<pre><code>    1         ← Numerator (how many parts we have)
-  ──────
-    4         ← Denominator (total equal parts)</code></pre>
-<table><thead><tr><th>Part</th><th>What it means</th></tr></thead><tbody><tr><td><strong>Numerator</strong> (top number)</td><td>How many equal parts we are talking about</td></tr><tr><td><strong>Denominator</strong> (bottom number)</td><td>The total number of equal parts the whole is divided into</td></tr></tbody></table>
-<h3>🍕 Pizza Fractions — The Tastiest Way to Learn!</h3>
-<p>Imagine a pizza cut into <strong>4 equal slices</strong>. Each slice is <strong>1/4 (one quarter)</strong> of the pizza.</p>
-<pre><code>  🍕 Fractions with a Pizza (4 equal slices)
-
-  Whole pizza          3/4 of the pizza       1/2 of the pizza
-  (4/4)                (3 quarters)           (a half)
-  ┌─────────┐          ┌─────────┐            ┌─────────┐
-  │ ╱ ╲    │          │ ╱╲▓▓   │            │ ╱ ╲    │
-  │╱  ╲   │          │╱ ▓▓   │            │▓▓╱ ╲   │
-  │──────│          │──────│            │──────│
-  │╲  ╱  │          │ ╲  ╱  │            │  ╲  ╱ │
-  │ ╲╱   │          │  ╲╱   │            │   ╲╱  │
-  └─────────┘          └─────────┘            └─────────┘
-  All 4 slices         3 of 4 slices          2 of 4 slices
-  = 4/4 (whole)       = 3/4                   = 2/4 = 1/2</code></pre>
-<h3>🎂 Common Fractions — Know These!</h3>
-<table><thead><tr><th>Fraction</th><th>Words</th><th>What it means</th></tr></thead><tbody><tr><td>1/2</td><td><strong>One half</strong></td><td>1 out of 2 equal parts — a whole divided in 2</td></tr><tr><td>1/3</td><td><strong>One third</strong></td><td>1 out of 3 equal parts</td></tr><tr><td>2/3</td><td><strong>Two thirds</strong></td><td>2 out of 3 equal parts</td></tr><tr><td>1/4</td><td><strong>One quarter</strong></td><td>1 out of 4 equal parts</td></tr><tr><td>2/4</td><td><strong>Two quarters</strong></td><td>Same as 1/2!</td></tr><tr><td>3/4</td><td><strong>Three quarters</strong></td><td>3 out of 4 equal parts</td></tr><tr><td>1/1</td><td><strong>One whole</strong></td><td>All parts — the complete thing!</td></tr></tbody></table>
-<h3>🔄 Equivalent Fractions — Different Names for the Same Amount!</h3>
-<p>Look at this — these fractions are actually the SAME amount!</p>
-<pre><code>  1/2 = 2/4
-
-  Whole          Divided in 2        Divided in 4
-  ┌───┐          ┌───┐                ┌───┐
-  │░░░│          │░░░│  → 1 half      │▓▓│▓▓│  → 2 quarters
-  │░░░│   =      │   │                │  │  │  = same amount!
-  │   │          └───┘                ├──┼──┤
-  └───┘                                └───┘
-  1/2           = 2/4</code></pre>
-<p><strong>Other equivalent fractions to remember:</strong></p>
-<ul><li>2/2 = 1 whole (the same!)</li><li>2/4 = 1/2</li><li>3/3 = 1 whole</li></ul></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>🟢 Your Mission</h3>
-<p><strong>Colour the Fractions!</strong></p>
-<p><em>(Draw these shapes and shade the correct fraction — ask a grown-up to help or draw on paper)</em></p>
-<ol><li>Draw a circle. Divide it into <strong>2 equal halves</strong>. Shade <strong>1 half</strong>.</li><li>Draw a rectangle. Divide it into <strong>4 equal quarters</strong>. Shade <strong>3 quarters</strong>.</li><li>Draw a square. Divide it into <strong>3 equal thirds</strong>. Shade <strong>2 thirds</strong>.</li></ol>
-<p><strong>Fill in the blanks:</strong></p>
-<ol><li>One whole divided into 2 equal parts = _____/2</li><li>One whole divided into 4 equal parts = _____/4</li><li>Two quarters = _____ half (write the number: 1/2 or other)</li><li>Three quarters + one quarter = _____ quarters = _____ whole</li></ol></div></section>
+    <section class="section teach"><p><strong>This is our only planet — and we're the generation that can protect it! Let's make a difference! 🌟</strong></p>
+<h3>🌍 Why Does Our Planet Need Protecting?</h3>
+<p>Our Earth is amazing, but it's in danger from pollution and overuse of resources:</p>
+<table><thead><tr><th>Problem</th><th>What it is</th><th>Why it matters</th></tr></thead><tbody><tr><td>🏭 Pollution</td><td>Dirty smoke, chemicals, plastic in the ocean</td><td>Makes air, water, and soil unhealthy</td></tr><tr><td>🐾 Loss of wildlife</td><td>Animals and plants dying out</td><td>Every species plays a role in nature</td></tr><tr><td>🌡️ Climate change</td><td>Earth is slowly getting warmer</td><td>Causes storms, floods, droughts</td></tr><tr><td>🗑️ Too much waste</td><td>People throw away too much plastic and food</td><td>Landfills fill up, oceans get polluted</td></tr><tr><td>🌲 Cutting down trees</td><td>Forests are cleared for farms/cities</td><td>Animals lose homes; less clean air</td></tr></tbody></table>
+<h3>♻️ THE 3 R's — REDUCE, REUSE, RECYCLE!</h3>
+<p>These are the three most important things we can do!</p>
+<h3>1️⃣ REDUCE — Use Less! 📉</h3>
+<ul><li>Turn off lights when you leave a room 💡</li><li>Don't leave taps running while brushing teeth 🚰</li><li>Use both sides of paper before recycling 📄</li><li>Say NO to plastic bags — bring your own bag 🛍️</li><li>Don't waste food — take only what you can eat 🍽️</li></ul>
+<h3>2️⃣ REUSE — Use Again! 🔄</h3>
+<ul><li>Use a reusable water bottle instead of buying plastic bottles 💧</li><li>Use old jars as storage containers 🫙</li><li>Donate old clothes and toys instead of throwing them away 👕</li><li>Use scrap paper for notes 📝</li><li>Repair things instead of replacing them 🔧</li></ul>
+<h3>3️⃣ RECYCLE — Turn Old into New! ♻️</h3>
+<ul><li>Paper → New paper 📄</li><li>Plastic bottles → New bottles, clothing, or playground equipment!</li><li>Glass bottles → New glass bottles 🫙</li><li>Metal cans → New metal products!</li><li>Food scraps → Compost → New soil → New plants! 🌱</li></ul>
+<h3>🌱 How YOU Can Help — Your Action Plan!</h3>
+<p>Here are 10 things you can do right now to help:</p>
+<table><thead><tr><th>#</th><th>Action</th><th>Why it helps</th></tr></thead><tbody><tr><td>1</td><td>Turn off lights 💡</td><td>Saves electricity</td></tr><tr><td>2</td><td>Use a reusable bottle 💧</td><td>Fewer plastic bottles!</td></tr><tr><td>3</td><td>Sort your rubbish ♻️</td><td>Recycling works!</td></tr><tr><td>4</td><td>Plant a tree or flower 🌳🌸</td><td>More clean air!</td></tr><tr><td>5</td><td>Don't waste food 🍎</td><td>Less food in landfills</td></tr><tr><td>6</td><td>Walk or bike instead of driving 🚶</td><td>Less car pollution</td></tr><tr><td>7</td><td>Turn off the tap while brushing 🪥</td><td>Saves water</td></tr><tr><td>8</td><td>Use less paper 📄</td><td>Saves trees</td></tr><tr><td>9</td><td>Pick up litter you see 🗑️</td><td>Cleaner parks and oceans</td></tr><tr><td>10</td><td>Tell a friend what you've learned 🗣️</td><td>Multiply the impact!</td></tr></tbody></table>
+<h3>🐢 Animals That Need Our Help</h3>
+<p>Many animals are in danger because their homes are being destroyed:</p>
+<table><thead><tr><th>Animal</th><th>Habitat</th><th>Danger</th></tr></thead><tbody><tr><td>🐢 Sea Turtles</td><td>Oceans</td><td>Plastic pollution — they mistake plastic bags for jellyfish!</td></tr><tr><td>🐼 Giant Pandas</td><td>Bamboo forests, China</td><td>Habitat loss (forests cut down)</td></tr><tr><td>🐧 Emperor Penguins</td><td>Antarctica</td><td>Climate change — sea ice is melting</td></tr><tr><td>🦍 Orangutans</td><td>Rainforests, Borneo</td><td>Deforestation (forest clearing)</td></tr><tr><td>🐋 Blue Whales</td><td>Oceans</td><td>Pollution and ship noise</td></tr></tbody></table>
+<h3>🌈 10 THINGS I PROMISE TO DO FOR OUR PLANET</h3>
+<p>Complete this promise list! Write at least 5 things you will do:</p>
+<pre><code>1. _________________________________________________
+2. _________________________________________________
+3. _________________________________________________
+4. _________________________________________________
+5. _________________________________________________
+6. _________________________________________________
+7. _________________________________________________</code></pre></section><section class="section try-section"><div class="try"><div class="try-label">✏️ Your Turn!</div><h3>🟢 Your Mission</h3>
+<p><strong>Answer these questions:</strong></p>
+<ol><li>What do the 3 R's stand for?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>Why should we not throw plastic bags into the ocean?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>Name one animal that is in danger because of habitat loss:</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>What happens when you turn off a tap while brushing your teeth?</li></ol>
+<p>→ ___________________________________</p>
+<ol><li>Why should we plant more trees?</li></ol>
+<p>→ ___________________________________</p>
+<h3>🏆 CONGRATULATIONS — YOU COMPLETED ALL 5 WEEKS! 🏆</h3>
+<p><strong>What an amazing learner you are!</strong> 🎉</p>
+<p>You've mastered:</p>
+<ul><li>➕ 3-digit addition & subtraction with carrying and borrowing</li><li>🔄 Synonyms — words that mean the same thing</li><li>🪐 The Solar System and all 8 planets</li><li>⛵ Famous Explorers from history</li><li>🧭 How to read maps and find directions</li><li>➗ Division and fair sharing</li><li>🗣️ 4 types of sentences</li><li>🌱 Parts of a plant and photosynthesis</li><li>🏛️ Ancient China — inventions and wonders</li><li>🦺 Community safety and emergency numbers</li><li>⏰ Reading clocks and AM vs PM</li><li>✏️ Punctuation — periods, commas, question marks, exclamation points!</li><li>🧊 Solids, liquids, and gases</li><li>🔥 The Great Fire of London</li><li>💰 Needs vs wants and saving money</li><li>🍕 Fractions — halves, quarters, thirds</li><li>🎶 Writing your own poem!</li><li>🫀 The human body — heart, lungs, brain, stomach</li><li>🚀 Transport through history</li><li>🌍 Protecting our planet</li></ul>
+<p><strong>You are officially a SUPER LEARNER!</strong> 🌟</p>
+<p><em>Well done, Kid C! Keep being curious, keep asking questions, and keep learning — the world is yours to explore! 🚀</em></p></div></section>
   </main>
 
   <div class="badge-row" id="badge">
     <div class="badge-info">
       <div class="lbl">Badge Earned!</div>
-      <div class="nm">Fraction Finder</div>
+      <div class="nm">Planet Protector</div>
       <div class="sub">You earned it — show Dad!</div>
     </div>
     <div class="badge-medal">★</div>
-    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Zane's Week 5</span></div>
+    <div class="badge-stars">★ ★ ★<br><span style="font-size:14px;color:var(--deep);opacity:0.7;">🦊 Kid C's Week 7</span></div>
   </div>
 
   <footer class="foot">
-    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Zane</span>
-    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-10</span>
+    <span class="foot-left">📖 Usborne-style Lesson · Made with ♥ for Kid C</span>
+    <span class="foot-right">djayku.github.io/kids-lessons · 2026-08-28</span>
   </footer>
 </div>
 </body>
